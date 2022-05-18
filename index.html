@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="layer-wrap">
+    <canvas id="line" width="1980" height="1280"></canvas>
+  
+    </div>
+    <script type="text/javascript">
+    //読み込み時に実行する
+   
+    onload = function() {
+      /* 線を引く */
+      const line_canvas = document.getElementById("line"); 
+      const line_ctx = line_canvas.getContext("2d");
+      line_ctx.beginPath();
+      // 開始位置に移動する
+      for (let i =50;i<1200; i+=300){
+      line_ctx.moveTo(50,i);
+      // 線を引く
+      line_ctx.lineTo(950, i);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      }
+      for (let i =50;i<1200; i+=300){
+        line_ctx.moveTo(i, 50);
+      line_ctx.lineTo(i, 950);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      }
+    }
+  
+var as=1;
+if(as==1){
+oncload= function (event) {
+  var x = event.pageX;
+  var y = event.pageY;
+  console.log("x座標 : " + x);
+  console.log( "y座標 : " + y);
+  const line_canvas = document.getElementById("line");
+      const line_ctx = line_canvas.getContext("2d");
+      
+      line_ctx.beginPath();
+      
+      
+      if (as== 1&&50 <= x && x <= 350 && 50 <= y && y <= 350){
+      line_ctx.arc(200, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      }
+      else if (50 <= x && x <= 350 && 351 <= y && y <= 650){
+      line_ctx.arc(200, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      else if (50 <= x && x <= 350 && 651 <= y && y <= 951){
+      line_ctx.arc(200, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      else if ( 351<= x && x <= 650 && 50 <= y && y <= 350){
+      line_ctx.arc(500, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      else if ( 351<= x && x <= 650 && 351 <= y && y <= 650){
+      line_ctx.arc(500, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+     else if ( 351<= x && x <= 650 && 651 <= y && y <= 950){
+      line_ctx.arc(500, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+     else if ( 651<= x && x <= 950 && 50 <= y && y <= 350){
+      line_ctx.arc(800, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      else if ( 651<= x && x <= 950 && 351 <= y && y <= 650){
+      line_ctx.arc(800, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      else if ( 651<= x && x <= 950 && 651 <= y && y <= 950){
+      line_ctx.arc(800, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();}
+      }
+      as++;
+    }
+    else{;}
+
+
+    </script>
+  </body>
+</html>
