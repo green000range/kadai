@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div class="layer-wrap">
+    <canvas id="line" width="1980" height="1280"></canvas>
+  
+    </div>
+    <script type="text/javascript">
+    //読み込み時に実行する
+   
+    onload = function() {
+      /* 線を引く */
+      var line_canvas = document.getElementById("line"); 
+      var line_ctx = line_canvas.getContext("2d");
+      line_ctx.beginPath();
+      // 開始位置に移動する
+      for (let i =50;i<1200; i+=300){
+      line_ctx.moveTo(50,i);
+      line_ctx.lineTo(950, i);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      }
+      for (let i =50;i<1200; i+=300){
+        line_ctx.moveTo(i, 50);
+      line_ctx.lineTo(i, 950);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      }
+      
+    }
+ 
+var as = 2;
+var one = 0;
+let two = 0;
+let three = 0;
+let four = 0;
+let five = 0;
+let six = 0;
+let seven = 0;
+let eight = 0;
+let nine = 0;
+let ten = 0;
+let jyuiti = 0;
+let jyuuni= 0;
+let jyuusann = 0;
+let jyuuyonn = 0;
+let jyuugo = 0;
+let jyuuroku = 0;
+let jyuunana = 0;
+let jyuuhati = 0;
+
+onclick= function (event) {
+  
+  var x = event.pageX;
+  var y = event.pageY;
+  console.log("x座標 : " + x);
+  console.log( "y座標 : " + y);
+  var line_canvas = document.getElementById("line");
+      var line_ctx = line_canvas.getContext("2d");
+      
+      line_ctx.beginPath();
+     
+      if(as % 2 == 0 ){
+      
+      if (50 <= x && x <= 350 && 50 <= y && y <= 350 && one == 0 && ten == 0){
+      line_ctx.arc(200, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      one++;
+      
+  }
+      else if (50 <= x && x <= 350 && 351 <= y && y <= 650 && two == 0&& jyuiti == 0){
+      line_ctx.arc(200, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      two++;
+    }
+      else if (50 <= x && x <= 350 && 651 <= y && y <= 951 && three== 0 && jyuuni == 0){
+      line_ctx.arc(200, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      three++;}
+      else if ( 351<= x && x <= 650 && 50 <= y && y <= 350 && four == 0 && jyuusann == 0){
+      line_ctx.arc(500, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      four++;}
+      else if ( 351<= x && x <= 650 && 351 <= y && y <= 650 && five == 0 && jyuuyonn == 0){
+      line_ctx.arc(500, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      five++;}
+     else if ( 351<= x && x <= 650 && 651 <= y && y <= 950 && six == 0 && jyuugo == 0){
+      line_ctx.arc(500, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      six++;}
+     else if ( 651<= x && x <= 950 && 50 <= y && y <= 350 && seven == 0 && jyuuroku == 0){
+      line_ctx.arc(800, 200, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      seven++;}
+      else if ( 651<= x && x <= 950 && 351 <= y && y <= 650 && eight == 0 && jyuunana == 0){
+      line_ctx.arc(800, 500, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      eight++;}
+      else if ( 651<= x && x <= 950 && 651 <= y && y <= 950 && nine == 0 && jyuuhati == 0){
+      line_ctx.arc(800, 800, 100, 0, Math.PI * 2, false);
+      line_ctx.strokeStyle = 'blacck';
+      line_ctx.lineWidth = 3;
+      line_ctx.stroke();
+      as++;
+      nine++;}
+    
+      
+      }
+      
+     else if(as % 2 ==  1){
+        
+        if (50 <= x && x <= 350 && 50 <= y && y <= 350 && ten == 0 && one == 0){
+          line_ctx.moveTo(100,100);
+      line_ctx.lineTo(300, 300);
+      line_ctx.moveTo(300,100);
+      line_ctx.lineTo(100, 300);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      ten++;}
+        else if (50 <= x && x <= 350 && 351 <= y && y <= 650 && jyuiti == 0 && two == 0){
+          line_ctx.moveTo(100,400);
+      line_ctx.lineTo(300, 600);
+      line_ctx.moveTo(300,400);
+      line_ctx.lineTo(100, 600);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuiti}
+        else if (50 <= x && x <= 350 && 651 <= y && y <= 951 && jyuuni == 0 && three == 0){
+          line_ctx.moveTo(100,700);
+      line_ctx.lineTo(300, 900);
+      line_ctx.moveTo(300,700);
+      line_ctx.lineTo(100, 900);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuuni++;}
+        else if ( 351<= x && x <= 650 && 50 <= y && y <= 350 && jyuusann == 0 && four == 0){
+          line_ctx.moveTo(400,100);
+      line_ctx.lineTo(600, 300);
+      line_ctx.moveTo(600,100);
+      line_ctx.lineTo(400, 300);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuusann++;}
+        else if ( 351<= x && x <= 650 && 351 <= y && y <= 650 && jyuuyonn == 0 && five == 0){
+          line_ctx.moveTo(400,400);
+      line_ctx.lineTo(600, 600);
+      line_ctx.moveTo(600,400);
+      line_ctx.lineTo(400, 600);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuuyonn++;}
+       else if ( 351<= x && x <= 650 && 651 <= y && y <= 950 && jyuugo == 0 && six == 0){
+        line_ctx.moveTo(400,700);
+      line_ctx.lineTo(600, 900);
+      line_ctx.moveTo(600,700);
+      line_ctx.lineTo(400, 900);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuugo++;}
+       else if ( 651<= x && x <= 950 && 50 <= y && y <= 350 && jyuuroku == 0 && seven == 0){
+        line_ctx.moveTo(700,100);
+      line_ctx.lineTo(900, 300);
+      line_ctx.moveTo(900,100);
+      line_ctx.lineTo(700, 300);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuunana++;}
+        else if ( 651<= x && x <= 950 && 351 <= y && y <= 650 && jyuunana == 0 && eight == 0){
+          line_ctx.moveTo(700,400);
+      line_ctx.lineTo(900, 600);
+      line_ctx.moveTo(900,400);
+      line_ctx.lineTo(700, 600);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+      jyuunana++;}
+        else if ( 651<= x && x <= 950 && 651 <= y && y <= 950 && jyuuhati == 0 && nine == 0){
+          line_ctx.moveTo(700,700);
+      line_ctx.lineTo(900, 900);
+      line_ctx.moveTo(900,700);
+      line_ctx.lineTo(700, 900);
+      line_ctx.closePath();
+      line_ctx.stroke();
+      as++;
+    jyuuhati++;}
+          }
+         else if (one == 1 && two == 1){
+            
+        onclick="disabled = true;"
+            }
+      }
+    
+    
+      
+
+    </script>
+  </body>
+</html>
